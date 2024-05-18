@@ -17,9 +17,8 @@ requirements = read_requirements("requirements.txt")
 setup(
     name='quant-common',
     version=version,
-    packages=find_packages(),
+    packages=find_packages(exclude=["tests", "tests.*", "examples", "examples.*"]),
     author='dalcon10028',
     author_email='dalcon10280@gmail.com',
-    command_packages=find_packages(exclude=["tests", "tests.*", "examples", "examples.*"]),
-    requirements=requirements
+    install_requires=requirements,
 )
