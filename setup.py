@@ -20,6 +20,6 @@ setup(
     packages=find_packages(),
     author='dalcon10028',
     author_email='dalcon10280@gmail.com',
-    command_packages=['quant_common'],
+    command_packages=find_packages(exclude=["tests", "tests.*", "examples", "examples.*"]),
     requirements=requirements
 )
