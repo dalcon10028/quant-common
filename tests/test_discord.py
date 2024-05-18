@@ -1,6 +1,5 @@
-import json
 from unittest import mock
-
+from quant_common import discord
 import pytest
 
 
@@ -11,7 +10,6 @@ class TestDiscord:
         """send should send a message to discord with the embed."""
 
         # Arrange
-        from discord import discord
         from discord_webhook import DiscordEmbed
 
         embed = DiscordEmbed()
@@ -27,8 +25,7 @@ class TestDiscord:
         """send_error should send a message to discord with the error message and data."""
 
         # Arrange
-        from discord import discord
-        from exception.quant_exception import QuantException
+        from quant_common.exception import QuantException
 
         exception = QuantException(name='name', code=500, message='message')
         data = {'key': 'value'}
@@ -44,8 +41,6 @@ class TestDiscord:
         """send_warning should send a message to discord with the warning message and data."""
 
         # Arrange
-        from discord import discord
-
         message = 'message'
         data = {'key': 'value'}
 
@@ -60,8 +55,6 @@ class TestDiscord:
         """send_info should send a message to discord with the info message and data."""
 
         # Arrange
-        from discord import discord
-
         message = 'message'
         data = {'key': 'value'}
 
@@ -76,8 +69,6 @@ class TestDiscord:
         """send_success should send a message to discord with the success message and data."""
 
         # Arrange
-        from discord import discord
-
         message = 'message'
         data = {'key': 'value'}
 

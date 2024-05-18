@@ -2,9 +2,9 @@ import os
 
 from typing import Optional
 from discord_webhook import DiscordEmbed, DiscordWebhook
-from discord.message_color import MessageColor
-from discord.utils import format_data
-from exception import QuantException
+from .message_color import MessageColor
+from .utils import format_data
+from ..exception import QuantException
 
 webhook = DiscordWebhook(
     url=os.environ.get("DISCORD_WEBHOOK_URL")
