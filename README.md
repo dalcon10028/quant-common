@@ -2,10 +2,10 @@
 
 > 퀀트 공통 모듈
 
-## 설치
+## Install
 
 ```bash
-pip install git+
+pip install git+https://github.com/dalcon10028/quant-common.git
 ```
 
 ## 지원 모듈
